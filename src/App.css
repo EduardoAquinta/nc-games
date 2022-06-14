@@ -1,9 +1,93 @@
 .App {
   text-align: center;
+  }
+ 
+
+#Header {
+color:#166045}
+
+
+#reviewList {
+  display: block;
+  width:100%;
+  background-color: #fff;
+  color: #444;
+  list-style-type: none;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 
 
+@media only screen and (min-width: 600px) {
+  #reviewList ul {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  color: #444;
+  list-style-type: none;
+  float: left;
+  width: 30%;
+  padding: 0 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+#reviewList img {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px 5px 5px 5px ;
+}
 
 
 
+.card{
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 80%;
+  margin: 5 5px
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+
+.navbar {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navbar li {
+  list-style-type: none;
+}
+
+.navbar a{
+  float: left;
+  color: #6b1d1d;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+#clickimage {
+  font-size: 70%;
+  flex-direction:inherit;
+  border: #444 solid;
+  border-radius: 5px;
+  border-left: 1em;
+}
