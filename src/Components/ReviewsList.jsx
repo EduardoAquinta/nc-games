@@ -19,9 +19,9 @@ const ReviewList = () => {
     if (isLoading) return <p>Loading Reviews... please wait...</p>
     return (
         <section id="reviewList">
+            <p id="clickimage">Please click image to load full review</p>
             {reviews.reviews.map((review) => {
                 return (
-                    <ol type="1" key={review.review_id}>
                         <ReviewListing
                         key={review.review_id}
                         title={review.title}
@@ -33,7 +33,7 @@ const ReviewList = () => {
                         votes={review.votes}
                         comment_count={review.comment_count}
                         />
-                    </ol>
+                    
                 )
             })}
         </section>

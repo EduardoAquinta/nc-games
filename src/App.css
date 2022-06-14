@@ -4,20 +4,32 @@
  
 
 #Header {
-  text-decoration: dotted;
+color:#166045}
+
+
+#reviewList {
+  display: block;
+  width:100%;
+  background-color: #fff;
+  color: #444;
+  list-style-type: none;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 
-#reviewsList {
-  padding: 2px 16px;
-}
 
-#reviewList ul {
+@media only screen and (min-width: 600px) {
+  #reviewList ul {
   display: flex;
   flex-direction: row;
   background-color: #fff;
   color: #444;
   list-style-type: none;
+  float: left;
+  width: 30%;
+  padding: 0 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
 }
 
 #reviewList img {
@@ -26,12 +38,15 @@
   border-radius: 5px 5px 5px 5px ;
 }
 
-.card {
+
+
+.card{
   background-color: #444;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
-  font-size: 150%;
+  font-size: 80%;
+  margin: 5 5px
 }
 
 .card:hover {
@@ -69,6 +84,10 @@
   color: white;
 }
 
-#clickme {
-  font-size: small;
+#clickimage {
+  font-size: 70%;
+  flex-direction:inherit;
+  border: #444 solid;
+  border-radius: 5px;
+  border-left: 1em;
 }
