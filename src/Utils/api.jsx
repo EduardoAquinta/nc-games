@@ -10,3 +10,10 @@ export const fetchReviewList = () => {
         return response.data
     });
 };
+
+export const fetchCategoryList = () => {
+    return gamesDB.get(`/categories`)
+    .then((response) => {
+        return response.data
+    })
+}

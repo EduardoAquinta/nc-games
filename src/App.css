@@ -91,3 +91,10 @@ color:#166045}
   border-radius: 5px;
   border-left: 1em;
 }
+
+#categoryList {
+  text-align: left;
+  list-style-type: none;
+  padding:10px;
+  border:#444 solid 5px;
+}
