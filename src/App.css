@@ -29,9 +29,8 @@
 }
 
 #reviewList ul {
-  display: grid;
-  grid-template-columns: 100px 100px 100px;
-  grid-gap: 10px;
+  display: flex;
+  flex-direction: row;
   background-color: #fff;
   color: #444;
   list-style-type: none;
@@ -84,4 +83,8 @@
 .navbar.active {
   background-color: #04AA6D;
   color: white;
+}
+
+#clickme {
+  font-size: small;
 }

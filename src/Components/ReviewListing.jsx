@@ -3,11 +3,9 @@ export default function ReviewListing({title, designer, owner, review_img_url, c
         <article id="reviewList">
             <ul className="card">
                 <li><img src={review_img_url} alt="none found" id="listing"/></li>
-                <li>Title : {title}</li>
-                <li>Designer : {designer}</li>
-                <li>Category: {category}</li>
-                <li>Votes: {votes}</li>
-            </ul>
+                <li>{title}</li>
+                <li id="clickme">Please Click to go to full review</li>
+           </ul>
         </article>
     )
 }
