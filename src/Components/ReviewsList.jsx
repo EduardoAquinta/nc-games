@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import ReviewListing from './ReviewListing'; 
 import { fetchReviewList } from '../Utils/api';
+import CategoryList from './ReviewCategories';
 
 const ReviewList = () => {
     const [reviews, setReviews] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
 
     useEffect(() => {
         fetchReviewList()
@@ -19,9 +19,10 @@ const ReviewList = () => {
     if (isLoading) return <p>Loading Reviews... please wait...</p>
     return (
         <section id="reviewList">
-            <p id="clickimage">Please click image to load full review</p>
-            {reviews.reviews.map((review) => {
-                return (
+            <CategoryList />
+               <p id="clickimage">Please click image to load full review</p>
+                {reviews.reviews.map((review) => {
+                    return (
                         <ReviewListing
                         key={review.review_id}
                         title={review.title}
@@ -33,9 +34,8 @@ const ReviewList = () => {
                         votes={review.votes}
                         comment_count={review.comment_count}
                         />
-                    
-                )
-            })}
+                    )
+                })};
         </section>
     )
 }

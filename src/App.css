@@ -93,8 +93,17 @@ color:#166045}
 }
 
 #categoryList {
-  text-align: left;
+  display:block;
+  text-align: center;
   list-style-type: none;
   padding:10px;
-  border:#444 solid 5px;
+}
+
+#categoryList #categoryButtons{
+  display:flex;
+  flex-direction: row;
+  text-align: center;
+  list-style-type: none;
+  padding:10px;
+  border:rgb(94, 18, 18) solid 2px;
 }

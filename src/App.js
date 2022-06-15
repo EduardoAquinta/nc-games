@@ -8,7 +8,7 @@ import Navbar from './Components/Navbar';
 import Home from './Components/Home';
 import ReviewList from './Components/ReviewsList';
 import UsersList from './Components/UsersList';
-import CategoryList from './Components/ReviewCategories';
+import ReviewsByCategory from './Components/ReviewsByCategories';
 
 
 //Run
@@ -22,7 +22,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/reviews" element={<ReviewList/>} />
         <Route path="/users" element={<UsersList />} /> 
-        <Route path="/categories" element={<CategoryList />} />
+        <Route path="/reviews/:category_name" element={<ReviewsByCategory />} />
       </Routes>
     </div>
     </BrowserRouter>
