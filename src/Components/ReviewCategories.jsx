@@ -1,34 +1,43 @@
-import {useEffect, useState } from 'react';
+import {useEffect, useState  } from 'react';
 import { fetchCategoryList } from '../Utils/api';
-import CategoryListing from './CategoryListing';
+import { Link } from 'react-router-dom';
+import ReviewsByCategory from './ReviewsByCategories';
 
 const CategoryList =() => {
     const [categories, setCategories] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-
     useEffect(() => {
         fetchCategoryList()
-        .then((data) => {
-            setCategories(data);
+        .then((reviewsFromApi) => {
+            setCategories(reviewsFromApi.categories);
             setIsLoading(false);
         })
     }, []);
-
+    
 
     if( isLoading) return <p>Fetching categories now...please wait...</p>
 
     return( 
-        <section id="categoryListing">
-            <p>Please Click on the category you wish to view...</p>
-            {categories.categories.map((category) => {
-                return (
-                    <CategoryListing
-                    category_name={category.slug}
-                    description={category.description}
-                    ></CategoryListing>
+        <section id="categoryList">
+            <p>Please click on a categories below to filter the results</p>
+               
+            {categories.map((category) => {
+                return ( 
+                    <div>
+                        <Link to={`/reviews/${category.slug}`}>
+                        <button id="categoryButtons"
+                        key={category.slug}
+                        value={category.slug}
+                        >{category.slug}
+                        </button>
+                        </Link>
+                    </div>            
                 )
             })}
+                    <p>Total Categories = {categories.length}</p>
+                    <ReviewsByCategory />
+                    
         </section>
     )
 
