@@ -7,7 +7,7 @@
 color:#166045}
 
 
-#reviewList {
+#reviewListCat {
   display: block;
   width:100%;
   background-color: #fff;
@@ -32,7 +32,7 @@ color:#166045}
   }
 }
 
-#reviewList img {
+#reviewListCat img {
   height: 50px;
   width: 50px;
   border-radius: 5px 5px 5px 5px ;

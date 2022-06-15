@@ -18,11 +18,14 @@ export const fetchCategoryList = () => {
     })
 }
 
-// export const fetchReviewsByCategory = (slug) => {
-//     console.log(slug)
-//     return gamesDB.get(`/reviews/${slug}`)
-//     .then((response) => {
-//         console.log(response)
-//         return response.data
-//     })
-// }
+export const fetchReview = (review_id) => {
+    console.log(review_id)
+    return gamesDB.get(`/reviews/`, {params: {review_id: review_id}})
+    .then((response) => {
+        return response.data
+    })
+}
+
+
+
+

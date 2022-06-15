@@ -1,29 +1,29 @@
 import { useEffect, useState } from 'react';
-import ReviewListing from './ReviewListing'; 
-import { fetchReviewList } from '../Utils/api';
-import CategoryList from './ReviewCategories';
+import { useParams } from 'react-router-dom';
+import { fetchReview } from '../Utils/api';
 
-const ReviewList = () => {
-    const [reviews, setReviews] = useState([]);
+import ReviewListing from './ReviewListing';
+
+const SingleReview = () => {
+    const [review, setReview] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
+    const mystery = useParams();
+    console.log(mystery, "<---Mystery")
+
     useEffect(() => {
-        fetchReviewList()
+        fetchReview(mystery)
         .then((data) => {
-            setReviews(data);
+            console.log(data, "fetched single review data ")
+            setReview(data);
             setIsLoading(false);
-        });
-    }, []);
+        })
+    }, [mystery])
 
-
-    if (isLoading) return <p>Loading Reviews... please wait...</p>
+    if (isLoading) return<p>Loading Review... please wait...</p>
     return (
-        <section id="reviewList">
-            <CategoryList />
-               <p id="clickimage">Please click image to load full review</p>
-                {/* {reviews.reviews.map((review) => {
-                    return (
-                        <ReviewListing
+        <section id="singleReview">
+              <ReviewListing
                         key={review.review_id}
                         title={review.title}
                         designer={review.designer}
@@ -34,10 +34,8 @@ const ReviewList = () => {
                         votes={review.votes}
                         comment_count={review.comment_count}
                         />
-                    )
-                })}; */}
         </section>
     )
 }
 
-export default ReviewList;
+export default SingleReview;
