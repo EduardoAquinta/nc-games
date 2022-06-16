@@ -15,21 +15,27 @@ export const fetchCategoryList = () => {
     return gamesDB.get(`/categories`)
     .then((response) => {
         return response.data
-    })
-}
+    });
+};
 
 export const fetchReview = (review_id) => {
     return gamesDB.get(`/reviews/${review_id}`,)
     .then((response) => {
         return response.data
-    })
-}
+    });
+};
 
 export const patchVotes = (review_id, inc_votes) => {
     return gamesDB.patch(`/reviews/${review_id}`, {inc_votes})
     .then((response) => {
         return response.data
-    })
-}
+    });
+};
 
+export const fetchComments = (review_id) => {
+    return gamesDB.get(`/reviews/${review_id}/comments`)
+    .then((response) => {
+        return response.data
+    });
+};
 

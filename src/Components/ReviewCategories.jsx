@@ -27,7 +27,7 @@ const CategoryList =() => {
                
             {categories.map((category) => {
                 return ( 
-                    <div>
+                    <div key={category.slug}>
                         <Link to={`/categories/${category.slug}`}>
                         <button id="categoryButtons"
                         key={category.slug}

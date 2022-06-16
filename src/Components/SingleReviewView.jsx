@@ -4,9 +4,9 @@ export default function SingleReviewView({title, designer, owner, review_body, r
              <p> Title - {title} </p>
              <p> Designer - {designer} </p>
              <p> Owner - {owner}</p>
-             <p>Description - {review_body}</p>
              <p> Category - {category}</p>
              <p>Created - {created_at}</p>
+             <p>Description - {review_body}</p>
              <p>Comment Count - {comment_count}</p> 
             <img src={review_img_url} alt="none found" id="listing"></img>                
         </article>

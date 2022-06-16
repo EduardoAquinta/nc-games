@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchReview } from '../Utils/api';
 import SingleReviewView from './SingleReviewView';
+import ViewComments from './ViewComments';
 import Votes from './Vote';
 
 
@@ -26,8 +27,9 @@ const SingleReview = () => {
     if (isLoading) return<p>Loading Review... please wait...</p>
     return (
 
-        <section id="singleReview">
-                <button onClick={() => navigate("/reviews")}>Back to Main Page</button>
+        <section >
+            <article>
+                <button className="voteButton1" onClick={() => navigate("/reviews")}>Back to Main Page</button>
 
                   <SingleReviewView
                         key={review.review_id}
@@ -41,7 +43,11 @@ const SingleReview = () => {
                         comment_count={review.comment_count}
                         />
                         <Votes votes={review.votes} review_id={review.review_id} />
-        </section>
+            </article>
+            <article>
+            <ViewComments review_id={review.review_id}/>
+            </article>
+       </section>
     )
 }
 
