@@ -4,7 +4,9 @@
  
 
 #Header {
-color:#166045}
+color:#166045
+
+}
 
 
 #reviewListCat {
@@ -22,13 +24,12 @@ color:#166045}
   #reviewList ul {
   display: flex;
   flex-direction: row;
-  background-color: #fff;
-  color: #444;
   list-style-type: none;
-  float: left;
   width: 30%;
   padding: 0 10px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-image:linear-gradient(to right, rgb(143, 143, 220), white);
+
   }
 }
 
@@ -112,4 +113,10 @@ color:#166045}
   height: 100px;
   width: 100px;
   border-radius: 5px 5px 5px 5px ;
+}
+
+#singleReview {
+  border: #166045 solid;
+  background-image:linear-gradient(to right, rgb(143, 143, 220), white);
+  border-radius: 5px;
 }
