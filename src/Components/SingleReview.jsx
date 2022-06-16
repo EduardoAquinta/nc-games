@@ -38,7 +38,6 @@ const SingleReview = () => {
                         review_img_url={review.review_img_url}
                         category={review.category}
                         created_at={review.created_at}
-                        votes={review.votes}
                         comment_count={review.comment_count}
                         />
                         <Votes votes={review.votes} review_id={review.review_id} />
