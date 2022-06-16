@@ -6,9 +6,11 @@ import { BrowserRouter, Routes, Route} from  'react-router-dom';
 import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
-import ReviewList from './Components/ReviewsList';
+//import ReviewList from './Components/ReviewsList';
 import UsersList from './Components/UsersList';
 import ReviewsByCategory from './Components/ReviewsByCategories';
+import CategoryList from './Components/ReviewCategories';
+import SingleReview from './Components/SingleReview';
 
 
 //Run
@@ -20,9 +22,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/reviews" element={<ReviewList/>} />
+        <Route path="/reviews" element={<CategoryList/>} />
         <Route path="/users" element={<UsersList />} /> 
-        <Route path="/reviews/:category_name" element={<ReviewsByCategory />} />
+        <Route path="/categories/:category_name" element={<ReviewsByCategory />} />
+        <Route path="/reviews/:review_id" element={<SingleReview />} />
       </Routes>
     </div>
     </BrowserRouter>

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-//import { fetchReviewsByCategory} from '../Utils/api';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { fetchReviewList } from '../Utils/api'
 //import CategoryList from './ReviewCategories';
 
@@ -9,10 +8,11 @@ const ReviewsByCategory = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     const {category_name} = useParams(); 
+    const navigate = useNavigate();
+
     useEffect(() => {
         fetchReviewList(category_name)
         .then((data) => {
-            console.log(data, "<---fetchReviews data")
             setReviewsCat(data);
             setIsLoading(false);
         })
@@ -20,17 +20,25 @@ const ReviewsByCategory = () => {
 
     if (isLoading) return<p>Loading Reviews...please wait...</p>
     return (
+        <>
+        <button onClick={() => navigate(-1)}>Back to main page</button>
         <section id="reviewListCat">
             {reviewsCat.reviews.map((review) => {
 
                     return (
-                        <article>
+                          
+                        <article >
                         <p>{review.title}</p>
-                        <p>{review.review_img_url}</p>
+                        <p>{review.review_id}</p>
+                        <Link to={`/reviews/${review.review_id}`}>
+                        <img src={review.review_img_url} alt="board game"></img>
+                        </Link>
                         </article>
+                        
                 )
             })}
         </section>
+        </>
     )
 }
 

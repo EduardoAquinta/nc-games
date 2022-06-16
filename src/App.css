@@ -7,7 +7,7 @@
 color:#166045}
 
 
-#reviewList {
+#reviewListCat {
   display: block;
   width:100%;
   background-color: #fff;
@@ -32,7 +32,7 @@ color:#166045}
   }
 }
 
-#reviewList img {
+#reviewListCat img {
   height: 50px;
   width: 50px;
   border-radius: 5px 5px 5px 5px ;
@@ -106,4 +106,10 @@ color:#166045}
   list-style-type: none;
   padding:10px;
   border:rgb(94, 18, 18) solid 2px;
+}
+
+#singleReview img{
+  height: 100px;
+  width: 100px;
+  border-radius: 5px 5px 5px 5px ;
 }

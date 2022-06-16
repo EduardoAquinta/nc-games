@@ -21,7 +21,7 @@ const ReviewList = () => {
         <section id="reviewList">
             <CategoryList />
                <p id="clickimage">Please click image to load full review</p>
-                {reviews.reviews.map((review) => {
+                {/* {reviews.reviews.map((review) => {
                     return (
                         <ReviewListing
                         key={review.review_id}
@@ -35,7 +35,7 @@ const ReviewList = () => {
                         comment_count={review.comment_count}
                         />
                     )
-                })};
+                })}; */}
         </section>
     )
 }
