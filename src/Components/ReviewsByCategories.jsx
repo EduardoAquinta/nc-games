@@ -26,12 +26,15 @@ const ReviewsByCategory = () => {
             {reviewsCat.reviews.map((review) => {
 
                     return (
-                        <Link to={`/reviews/${review.review_id}`}>  
+                          
                         <article >
                         <p>{review.title}</p>
+                        <p>{review.review_id}</p>
+                        <Link to={`/reviews/${review.review_id}`}>
                         <img src={review.review_img_url} alt="board game"></img>
+                        </Link>
                         </article>
-                        </Link> 
+                        
                 )
             })}
         </section>

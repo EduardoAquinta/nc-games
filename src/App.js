@@ -10,7 +10,7 @@ import Home from './Components/Home';
 import UsersList from './Components/UsersList';
 import ReviewsByCategory from './Components/ReviewsByCategories';
 import CategoryList from './Components/ReviewCategories';
-import SingleReview from './Components/ReviewPage';
+import SingleReview from './Components/SingleReview';
 
 
 //Run
@@ -24,7 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/reviews" element={<CategoryList/>} />
         <Route path="/users" element={<UsersList />} /> 
-        <Route path="/reviews/:category_name" element={<ReviewsByCategory />} />
+        <Route path="/categories/:category_name" element={<ReviewsByCategory />} />
         <Route path="/reviews/:review_id" element={<SingleReview />} />
       </Routes>
     </div>

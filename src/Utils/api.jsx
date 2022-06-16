@@ -19,8 +19,7 @@ export const fetchCategoryList = () => {
 }
 
 export const fetchReview = (review_id) => {
-    console.log(review_id)
-    return gamesDB.get(`/reviews/`, {params: {review_id: review_id}})
+    return gamesDB.get(`/reviews/${review_id}`,)
     .then((response) => {
         return response.data
     })

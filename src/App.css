@@ -107,3 +107,9 @@ color:#166045}
   padding:10px;
   border:rgb(94, 18, 18) solid 2px;
 }
+
+#singleReview img{
+  height: 100px;
+  width: 100px;
+  border-radius: 5px 5px 5px 5px ;
+}
