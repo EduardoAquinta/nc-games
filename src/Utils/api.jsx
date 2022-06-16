@@ -25,6 +25,11 @@ export const fetchReview = (review_id) => {
     })
 }
 
-
+export const patchVotes = (review_id, inc_votes) => {
+    return gamesDB.patch(`/reviews/${review_id}`, {inc_votes})
+    .then((response) => {
+        return response.data
+    })
+}
 
 
