@@ -41,7 +41,7 @@ const SingleReview = () => {
                         votes={review.votes}
                         comment_count={review.comment_count}
                         />
-                        <Votes votes={review.vote} review_id={review.review_id} />
+                        <Votes votes={review.votes} review_id={review.review_id} />
         </section>
     )
 }
