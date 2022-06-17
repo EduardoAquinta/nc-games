@@ -22,12 +22,12 @@ const ReviewsByCategory = () => {
     return (
         <>
         <button onClick={() => navigate(-1)}>Back to main page</button>
-        <section id="reviewListCat">
+        <section id="reviewListCat" >
             {reviewsCat.reviews.map((review) => {
 
                     return (
                           
-                        <article >
+                        <article key={review.review_id}>
                         <p>{review.title}</p>
                         <p>{review.review_id}</p>
                         <Link to={`/reviews/${review.review_id}`}>

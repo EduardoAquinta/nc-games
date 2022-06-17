@@ -27,8 +27,8 @@ const Votes = ({votes, review_id}) => {
     return (
         <>
         <p>Votes - {votes + voteChange} </p>
-        <button onClick={handleClick} disabled={setVoteChange > 0}> Upvote</button>
-        <button onClick={handleClick2} disabled={setVoteChange < 0}> Downvote</button>
+        <button className="voteButton1" onClick={handleClick} disabled={setVoteChange > 0}> Upvote</button>
+        <button className="voteButton2" onClick={handleClick2} disabled={setVoteChange < 0}> Downvote</button>
 
         </>
     )

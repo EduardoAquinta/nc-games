@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-        <div>
+        <div id="home">
             <h2>Welcome to Northcoders Boardgame reviews!</h2>
             <p>Thanks for stopping by. We at northcoders take our leisure time very seriously. When we want to unwind after a heavy week of mentoring and programming and losing hair over CSS styling, our go-to place to be is the boardgaming table.</p>
 
