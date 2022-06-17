@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchReview } from '../Utils/api';
+import PostComment from './AddComment';
 import SingleReviewView from './SingleReviewView';
 import ViewComments from './ViewComments';
 import Votes from './Vote';
@@ -47,6 +48,7 @@ const SingleReview = () => {
             <article>
             <ViewComments review_id={review.review_id}/>
             </article>
+            <PostComment />
        </section>
     )
 }
