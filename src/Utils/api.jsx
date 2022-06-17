@@ -14,6 +14,7 @@ export const fetchReviewList = (slug) => {
 export const fetchCategoryList = () => {
     return gamesDB.get(`/categories`)
     .then((response) => {
+        console.log(response, "<---postfetch")
         return response.data
     });
 };
@@ -39,3 +40,10 @@ export const fetchComments = (review_id) => {
     });
 };
 
+export const postComment = ({review_id, author, body}) => {
+    return gamesDB.post(`/reviews/${review_id}`, {author, body})
+    .then((response) => {
+        console.log(response.data)
+        return response.data
+    });
+};
