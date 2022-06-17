@@ -142,7 +142,8 @@ color:#166045
   background-image:linear-gradient(to right, rgb(143, 143, 220), white);
   border-radius: 5px;
   box-shadow: #444 5px;
-  color: black
+  color: black;
+  font-size:small
 
 }
 
