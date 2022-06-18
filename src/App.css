@@ -14,7 +14,7 @@ color:#166045
 }
 
 
-#reviewListCat {
+/* .reviews-list {
   display: block;
   width:100%;
   border: #166045 solid;
@@ -22,12 +22,12 @@ color:#166045
   border-radius: 5px;
   list-style-type: none;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-}
+} */
 
 
 
 @media only screen and (min-width: 600px) {
-  #reviewList ul {
+  .reviews-list ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
@@ -39,7 +39,7 @@ color:#166045
   }
 }
 
-#reviewListCat img {
+.reviews-list img {
   height: 50px;
   width: 50px;
   border-radius: 5px 5px 5px 5px ;

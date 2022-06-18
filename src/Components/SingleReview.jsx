@@ -30,7 +30,7 @@ const SingleReview = () => {
     return (
 
         <section >
-            <article>
+            <div>
                 <button className="voteButton1" onClick={() => navigate("/reviews")}>Back to Main Page</    button>
 
                   <SingleReviewView
@@ -45,7 +45,7 @@ const SingleReview = () => {
                         comment_count={review.comment_count}
                         />
                         <Votes votes={review.votes} review_id={review.review_id} />
-            </article>
+            </div>
              <div>
                 <Comments review_id={(review_id)}/>
              </div>

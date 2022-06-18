@@ -1,6 +1,6 @@
 export default function SingleReviewView({title, designer, owner, review_body, review_img_url, category, created_at,  comment_count}) {
     return (
-        <article id="singleReview">
+        <div className="single-review">
              <p> Title - {title} </p>
              <p> Designer - {designer} </p>
              <p> Owner - {owner}</p>
@@ -9,6 +9,6 @@ export default function SingleReviewView({title, designer, owner, review_body, r
              <p>Description - {review_body}</p>
              <p>Comment Count - {comment_count}</p> 
             <img src={review_img_url} alt="none found" id="listing"></img>                
-        </article>
+        </div>
     )
 }

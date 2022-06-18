@@ -22,14 +22,14 @@ const CategoryList =() => {
     return(
         <> 
         <button onClick={() => navigate(-1)}>Back to reviews</button>
-        <section id="categoryList">
+        <section className="category-list">
             <p>Please click on a categories below to filter the results</p>
                
             {categories.map((category) => {
                 return ( 
                     <div key={category.slug}>
                         <Link to={`/categories/${category.slug}`}>
-                        <button id="categoryButtons"
+                        <button className="category-buttons"
                         key={category.slug}
                         value={category.slug}
                         >{category.slug}
