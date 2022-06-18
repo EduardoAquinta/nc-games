@@ -32,27 +32,26 @@ const ViewComments = () => {
 
 
     return (
+        <>
         <section id="commentsView" key={comments.comment_id}
         >
-            <p>All your gossipy comments for us to fawn over for dopamine hits!</p>
-            <li id="commentsList">
+            <p>All your gossipy comments for us to fawn over for dopamine hits!</p>            
             {comments.map((comment) => {
                 return (
                     <>
-                            <article id="commentCard" key={comment.comment_id}>
-                                <CommentView
-                                comment_id={comment.comment_id}
-                                author={comment.author}
-                                body={comment.body}/>
-                            </article>
+                        <article id="commentCard" key={comment.comment_id}>
+                            <CommentView
+                            comment_id={comment.comment_id}
+                            author={comment.author}
+                             body={comment.body}/>
+                        </article>
                     </>
                 )
             })}
-            </li>
-            <PostComment />
-
-
         </section>
+        <div>             <PostComment value={comments}/>
+        </div>
+        </>
     )
 }
 

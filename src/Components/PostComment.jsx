@@ -8,10 +8,12 @@ import { useParams } from "react-router-dom";
 import { postComment } from "../Utils/api";
 
 
-const PostComment = () => {
+const PostComment = (props) => {
 
+    let dave = props.value.length
     const [newUsername, setNewUserName] = useState("");
     const [newBody, setNewBody] = useState(""); 
+    const[commentCount, setCommentCount] = useState(dave)
 
     
     const {review_id} = useParams();
@@ -24,7 +26,7 @@ const PostComment = () => {
     }
 
     const isEmpty = commentToAdd.username.length === 0 || commentToAdd.body.length === 0;
-    const nonUser = !commentToAdd.username === "jessjelly" || !commentToAdd.username === "coojmessy" || !commentToAdd.username === "weegembump" || !commentToAdd.username === "tickle22" || commentToAdd.username === "grumpy19" || commentToAdd.username === "happyamy2016"
+    // const nonUser = !commentToAdd.username === "jessjelly" || !commentToAdd.username === "coojmessy" || !commentToAdd.username === "weegembump" || !commentToAdd.username === "tickle22" || commentToAdd.username === "grumpy19" || commentToAdd.username === "happyamy2016"
 
     useEffect(() => {
         
@@ -35,17 +37,22 @@ const PostComment = () => {
         postComment(commentToAdd);
         setNewUserName("");
         setNewBody("");
+
     }
+    
+    let currentCount = props.value.length
 
-    const handleClick = (data) => {
-        console.log(data.target)
-        // setNewUserName("");
-        // setNewBody("");
+    const handleClick = () => {
+        currentCount++
+        if(currentCount > commentCount) {
+            setCommentCount(currentCount)
+        }
     }
+    console.log(props, "<--- all the props")
+    console.log(commentCount, "<--- commentCount")
+    console.log(currentCount, "<--- currentCount")
 
-
-
-       return (
+         return (
         <section id="postComments">
             <p>Please post your comment here - </p>
             <form onSubmit={handleSubmit} id="commentForm" disabled="nonUser">
@@ -54,7 +61,6 @@ const PostComment = () => {
                 type="text"
                 name="author"
                 placeholder="username..."
-                disabled={nonUser}
                 value={newUsername}
                 onChange={(event) => {
                     setNewUserName(event.target.value)
@@ -69,7 +75,7 @@ const PostComment = () => {
                 onChange={(event) => {
                     setNewBody(event.target.value)
                 }}></textarea>
-                <button type="submit" onClick={handleClick} disabled={isEmpty}>Post Comment</button>
+                <button type="submit" onClick={handleClick}  disabled={isEmpty}>Post Comment</button>
             </form>
 
         </section>

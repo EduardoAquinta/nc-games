@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchReview } from '../Utils/api';
 import SingleReviewView from './SingleReviewView';
-import ViewComments from './ViewComments';
+//import ViewComments from './ViewComments';
 import Votes from './Vote';
+import Comments from './Comments';
 
 
 const SingleReview = () => {
@@ -45,11 +46,9 @@ const SingleReview = () => {
                         />
                         <Votes votes={review.votes} review_id={review.review_id} />
             </article>
-                <article>
-                    <ViewComments review_id={review.review_id}>
-                    </ViewComments>
-
-                </article>
+             <div>
+                <Comments review_id={(review_id)}/>
+             </div>
        </section>
     )
 }
