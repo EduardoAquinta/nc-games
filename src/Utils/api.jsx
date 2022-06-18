@@ -43,6 +43,7 @@ export const postComment = ({username, body, review_id}) => {
     console.log( body, username, review_id, "<--- prePost");
     return gamesDB.post(`/reviews/${review_id}/comments`, { username, body})
     .then((response) => {
+        console.log(response, "<--- postFetch")
         return response.data
     })
     .catch((error)=> {

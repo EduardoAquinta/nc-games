@@ -1,4 +1,7 @@
 const Comment = ({comment}) => {
+
+    //console.log(comment, "<--- comment")
+
     return (
         <div className="comment">
             <div className="comment-image-container">
