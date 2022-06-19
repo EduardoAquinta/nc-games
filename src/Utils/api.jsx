@@ -4,9 +4,11 @@ const gamesDB = axios.create({
     baseURL: 'https://edenv1.herokuapp.com/api'
 });
 
-export const fetchReviewList = (slug) => {
-    return gamesDB.get(`/reviews`, {params: {category: slug}})
+export const fetchReviewList = (slug, comment_count) => {
+    const params = {category:slug, sortby: comment_count}
+    return gamesDB.get(`/reviews`, {params})
     .then((response) => {
+        console.log(response);
         return response.data
     });
 };
@@ -14,7 +16,6 @@ export const fetchReviewList = (slug) => {
 export const fetchCategoryList = () => {
     return gamesDB.get(`/categories`)
     .then((response) => {
-        console.log(response, "<---postfetch")
         return response.data
     });
 };
@@ -40,12 +41,9 @@ export const fetchComments = (review_id) => {
     });
 };
 
-<<<<<<< HEAD
 export const postComment = ({username, body, review_id}) => {
-    console.log( body, username, review_id, "<--- prePost");
     return gamesDB.post(`/reviews/${review_id}/comments`, { username, body})
     .then((response) => {
-        console.log(response, "<--- postFetch")
         return response.data
     })
     .catch((error)=> {
@@ -54,12 +52,3 @@ export const postComment = ({username, body, review_id}) => {
 } 
 
 
-=======
-export const postComment = ({review_id, author, body}) => {
-    return gamesDB.post(`/reviews/${review_id}`, {author, body})
-    .then((response) => {
-        console.log(response.data)
-        return response.data
-    });
-};
->>>>>>> main

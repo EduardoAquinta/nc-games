@@ -1,12 +1,11 @@
 import {useEffect, useState  } from 'react';
 import { fetchCategoryList } from '../Utils/api';
-import { Link, useNavigate } from 'react-router-dom';
-import ReviewsByCategory from './ReviewsByCategories';
+import { Link } from 'react-router-dom';
+import Reviews from './Reviews';
 
 const CategoryList =() => {
     const [categories, setCategories] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const navigate = useNavigate();
 
     useEffect(() => {
         fetchCategoryList()
@@ -21,13 +20,11 @@ const CategoryList =() => {
 
     return(
         <> 
-        <button onClick={() => navigate(-1)}>Back to reviews</button>
-        <section className="category-list">
-            <p>Please click on a categories below to filter the results</p>
+        <section >
                
             {categories.map((category) => {
                 return ( 
-                    <div key={category.slug}>
+                    <div key={category.slug} className="category-list">
                         <Link to={`/categories/${category.slug}`}>
                         <button className="category-buttons"
                         key={category.slug}
@@ -39,7 +36,7 @@ const CategoryList =() => {
                 )
             })}
                     <p>Total Categories = {categories.length}</p>
-                    <ReviewsByCategory />
+                    <Reviews />
                     
         </section>
         </>

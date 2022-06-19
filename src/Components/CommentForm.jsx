@@ -10,7 +10,7 @@ const CommentForm = ({handleSubmit, submitLabel, review_id}) => {
         review_id:review_id
     }
 
-    const isEmpty = username.length === 0 || body.length === 0;
+    const isEmpty = body.length === 0;
 
 
     const onSubmit = (event) => {
@@ -21,10 +21,11 @@ const CommentForm = ({handleSubmit, submitLabel, review_id}) => {
 
     return (
         <form onSubmit={onSubmit}>
-            <label htmlFor="author">Author</label>
-                <input className="comment-form-author" value={username} onChange={(event) => setUsername(event.target.value)}></input>
                 <textarea 
                 className="comment-form-textarea"
+                rows="4"
+                cols="50"
+                placeholder="Please write your comment here..."
                 value={body}
                 onChange={(event) => setBody(event.target.value)}/>
                 <button 

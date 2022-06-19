@@ -1,5 +1,7 @@
 const Comment = ({comment}) => {
 
+    const time = new Date(`${comment.created_at}`).toLocaleString('en', {timeZoneName: 'short'})
+    
     //console.log(comment, "<--- comment")
 
     return (
@@ -9,7 +11,7 @@ const Comment = ({comment}) => {
             </div>
             <div className="comment-content">
                 <div className="comment-author">{comment.author}</div>
-                <div>{comment.created_at}</div>
+                <div>{time}</div>
 
             </div>
             <div className="comment-text">{comment.body}</div>

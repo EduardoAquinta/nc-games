@@ -21,6 +21,7 @@ const Votes = ({votes, review_id}) => {
         });
     };
     
+    console.log(voteChange);
       
     
     if(error) return<p>There has been an Error!</p> 

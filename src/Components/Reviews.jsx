@@ -1,42 +1,44 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { fetchReviewList } from '../Utils/api'
-//import CategoryList from './ReviewCategories';
 
-const ReviewsByCategory = () => {
-    const [reviewsCat, setReviewsCat] = useState([]);
+const Reviews = () => {
+    const [reviews, setReviews] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     const {category_name} = useParams(); 
-    const navigate = useNavigate();
+    const dave = 'comment_count';
+    
+    //const navigate = useNavigate();
 
     useEffect(() => {
-        fetchReviewList(category_name)
+        fetchReviewList(category_name, dave)
         .then((data) => {
-            setReviewsCat(data);
+            setReviews(data);
             setIsLoading(false);
         })
-    }, [category_name])
+    }, [category_name, dave])
+
+
 
     if (isLoading) return<p>Loading Reviews...please wait...</p>
     return (
-        <>
-        <button onClick={() => navigate(-1)}>Back to main page</button>
-        <section className="reviews-list" >
-            {reviewsCat.reviews.map((review) => {
+        <div id="container">
+         {/* <SortReviews reviews={reviews}/> * */}
+        <section  >
+            {reviews.reviews.map((review) => {
                     return (                          
-                        <article key={review.review_id}>
+                        <div key={review.review_id} className="card">
                         <p>{review.title}</p>
-                        <p>{review.review_id}</p>
                         <Link to={`/reviews/${review.review_id}`}>
                         <img src={review.review_img_url} alt="board game"></img>
                         </Link>
-                        </article>                        
+                        </div>                        
                 )
             })}
         </section>
-        </>
+        </div>
     )
 }
 
-export default ReviewsByCategory;
+export default Reviews;
