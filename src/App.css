@@ -7,6 +7,7 @@ body {
   text-align: center;
   background-color: #eaeff1;
   font-family: Lora;
+  font-size: large;
   }
 
 #home {
@@ -21,6 +22,7 @@ background-image: url("https://images.pexels.com/photos/1314435/pexels-photo-131
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
+font-size: 50px;
 }
 
 h1 {
@@ -63,7 +65,7 @@ h1 {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 40px;
 }
 
 .navbar a:hover{
@@ -99,7 +101,7 @@ h1 {
 #container{
   max-width: 300%;
   margin: 0 auto;
-  margin-top: 20vh;
+  margin-top: 2vh;
 }
 
 
