@@ -11,13 +11,14 @@ body {
   }
 
 #home {
-  border: #e0eae6 solid;
-  border-radius: 3px;
+  border: #6b1d1d solid 5px;
+  border-radius: 5px;
+  font-size: larger;
 }
 
 #Header {
 color:#394fc9;
-text-shadow: black 5px;
+text-shadow: black 10px;
 background-image: url("https://images.pexels.com/photos/1314435/pexels-photo-1314435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 background-size: cover;
 background-repeat: no-repeat;
@@ -82,14 +83,14 @@ h1 {
 }
 
 .category-list {
-    float:center;
-    color: #6b1d1d;
-    text-transform: capitalize;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:  center;
+  color: #6b1d1d;
+  text-transform: capitalize;
 }
-.category-list a:hover {
-  background-color: #ddd;
-  color: black;
-}
+
 
 .category-list.active {
   background-color: #04AA6D;
@@ -118,7 +119,7 @@ box-shadow: 1px 3px;
 }
 
 .whole-review {
-  border: #6b1d1d solid;
+  border: #6b1d1d solid 5px;
   background-image: img_url;
   border-radius: 25%;
   background-image: url("https://www.boardcubator.com/wp-content/themes/wp/static/images/bg-cyan.svg");
@@ -158,7 +159,7 @@ background-position: center;
   background-color: #78b9d3;;
 	position: relative;
 	padding: 20px;
-  border:#6b1d1d solid;
+  border:5px #6b1d1d solid;
   margin-top:5px;
   margin-bottom:5px;
   border-radius: 5px;
@@ -189,7 +190,7 @@ background-position: center;
   height: 80px;
   margin-bottom: 8px;
   margin-top: 8px;
-  border: 1px solid rgb(107, 114, 12);
+  border: 5px solid #6b1d1d;
 }
 
 .comment-form-button {
@@ -217,19 +218,24 @@ background-position: center;
 
 
 .user-list {
-flex:auto;
-flex-direction: row;
-flex-wrap: wrap;
-border:#6b1d1d solid;
-padding: 5px;
-width:20%;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:  center;
+  color: #6b1d1d;
 }
 .user-list img {
   height: 100px;
   width: 100px;
   border-radius: 10px 10px 10px 10px 
 }
+.single-user{
+  padding:5px;
+  box-shadow:2px 2px #6b1d1d;
+  border-radius: 10px 10px 10px 10px ;
 
+  border: 5px solid;
+}
 
 .delete-button {
   background-color:rgb(59, 130, 246);;

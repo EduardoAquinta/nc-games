@@ -19,7 +19,7 @@ const CategoryList =() => {
     if( isLoading) return <p>Fetching categories now...please wait...</p>
     return(
         <> 
-        <section >
+        <section className="category-list">
                
             {categories.map((category) => {
                 return ( 

@@ -19,16 +19,15 @@ const UsersList = () => {
 
     return (
         <>
-        <section >
+        <section className="user-list">
 
             {users.map((user) => {
                 return (
-                <div className="user-list"key={user.username}>                       
-                        <p>{user.username}</p>
+                <div className="single-user"key={user.username}>                       
                         <button className="user-list-image" value={user.username}> 
                         <img src={user.avatar_url} alt="nothing"></img> 
                         </button> 
-                       <p>{user.name}</p>
+                        <p>{user.username}</p>
                                        
                 </div>
                 )

@@ -8,8 +8,7 @@ export default function SingleReviewView({title, designer, owner, review_body, r
              <p> <strong>Category- </strong>{category}</p>
              <p><strong>Created- </strong>{created_at}</p>
              <p><strong>Description- </strong>{review_body}</p>
-             <p><strong>Comment Count- </strong>{comment_count === 0 ? "No comments to show": comment_count}</p>
-            <img src={review_img_url} alt="none found" id="listing"></img>
+             <img src={review_img_url} alt="none found" id="listing"></img>
         </div>
         </>
     )
