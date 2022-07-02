@@ -35,9 +35,8 @@ const CategoryList =() => {
                     </div>            
                 )
             })}
-                    <p>Total Categories = {categories.length}</p>
+            {/* <p>Please select a category</p> */}
                     <Reviews />
-                    
         </section>
         </>
     )

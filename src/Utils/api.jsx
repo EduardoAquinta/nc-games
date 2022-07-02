@@ -44,11 +44,26 @@ export const fetchComments = (review_id) => {
 export const postComment = ({username, body, review_id}) => {
     return gamesDB.post(`/reviews/${review_id}/comments`, { username, body})
     .then((response) => {
+        console.log(response.data)
         return response.data
     })
     .catch((error)=> {
         console.dir(error);
-    })
-} 
+    });
+} ;
+
+export const deleteCommentFromApi = (comment_id) => {
+    return gamesDB.delete(`/comments/${comment_id}`, { comment_id})
+    .then((empty) => {
+        return {empty};
+    });
+};
+
+export const fetchUserList = () => {
+    return gamesDB.get(`/users`)
+    .then((response) => {
+        return response.data
+    });
+};
 
 

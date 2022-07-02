@@ -39,9 +39,12 @@ h1 {
 
 .card{
   background-color: white;
-  border: 1px solid #bacdd8;
+  border: 3px solid #6b1d1d;
   padding: 8px;
   border-radius: 8px;
+  font-size: 30px;
+  color: #6b1d1d;
+
 }
 
 .card:hover {
@@ -78,16 +81,11 @@ h1 {
   color: white;
 }
 
-.category-list a{
-  float: left;
-  color: #6b1d1d;
-  text-align: center;
-  padding: 8px 12px;
-  text-decoration: none;
-  font-size: 17px;
-
+.category-list {
+    float:center;
+    color: #6b1d1d;
+    text-transform: capitalize;
 }
-
 .category-list a:hover {
   background-color: #ddd;
   color: black;
@@ -96,6 +94,13 @@ h1 {
 .category-list.active {
   background-color: #04AA6D;
   color: white;
+}
+
+.category-buttons {
+  color: #6b1d1d;
+padding: 3px;
+margin:5px;
+box-shadow: 1px 3px;
 }
 
 #container{
@@ -109,13 +114,17 @@ h1 {
 .whole-review img{
   height: 100px;
   width: 100px;
-  border-radius: 5px 5px 5px 5px ;
+  border-radius: 10px 10px 10px 10px ;
 }
 
 .whole-review {
   border: #166045 solid;
   background-image: img_url;
   border-radius: 5px;
+  background-image: url("https://www.boardcubator.com/wp-content/themes/wp/static/images/bg-cyan.svg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
 }
 
 
@@ -196,3 +205,4 @@ h1 {
 .comment-form-cancel-button {
   margin-left: 10px;
 }
+
