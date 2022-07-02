@@ -34,9 +34,9 @@ const CategoryList =() => {
                     </div>            
                 )
             })}
-            {/* <p>Please select a category</p> */}
-                    <Reviews />
         </section>
+        <Reviews />
+
         </>
     )
 

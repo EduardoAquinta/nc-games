@@ -9,7 +9,7 @@ const DeleteComment = ({comment_id}) => {
     const handleClick = () => {
         deleteCommentFromApi(comment_id)
         .then((commentDeleted) => {
-            console.log(commentDeleted);
+            console.log(commentDeleted)
             setDeleteComment(commentDeleted);
             setIsDeleting(true);
         })

@@ -16,18 +16,17 @@ const Votes = ({votes, review_id}) => {
     const handleClick2 = () => {
         setVoteChange((currentVote) => currentVote - 1);
         patchVotes(review_id, -1).catch((error) => {
-            console.dir(error)
+            setError(error)
             setVoteChange((currentVote) => currentVote + 1);
         });
     };
     
-      
     if(error) return<p>There has been an Error!</p> 
     return (
         <>
         <p>Votes - {votes + voteChange} </p>
-        <button className="voteButton1" onClick={handleClick} disabled={setVoteChange > 1}> Upvote</button>
-        <button className="voteButton2" onClick={handleClick2} disabled={setVoteChange < -1}> Downvote</button>
+        <button className="voteButton" onClick={handleClick} disabled={voteChange > 0}> Upvote</button>
+        <button className="voteButton" onClick={handleClick2} disabled={voteChange < 0}> Downvote</button>
 
         </>
     )

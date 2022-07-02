@@ -41,10 +41,8 @@ export const fetchComments = (review_id) => {
 };
 
 export const postComment = ({username, body, review_id}) => {
-    console.log({username, body, review_id}, "<--- before api")
     return gamesDB.post(`/reviews/${review_id}/comments`,  {username, body})
     .then((response) => {
-        console.log(response.data, "<--- afterApi")
         return response.data
     })
     .catch((error)=> {
