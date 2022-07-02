@@ -8,7 +8,7 @@ const Comment = ({comment}) => {
     return (
         <div className="comment">
             <div className="comment-image-container">
-                <img src="https://commons.wikimedia.org/wiki/File:Portrait_Placeholder.png" alt="no content"></img>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="no content"></img>
             </div>
             <div className="comment-content">
                 <div className="comment-author">{comment.author}</div>

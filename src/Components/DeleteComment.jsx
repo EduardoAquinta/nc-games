@@ -19,7 +19,7 @@ if (isDeleting)return<p>Deleting...</p>
 
 return (
     <section>
-        <button className="deleteButton" onClick={handleClick}>Delete</button>
+        <button className="delete-button" onClick={handleClick}>Delete</button>
     </section>
 )
 

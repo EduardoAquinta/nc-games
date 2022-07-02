@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
 body {
-  background-color: #eaeff1
+  background-color: #78b9d3
 }
 
 .App {
   text-align: center;
-  background-color: #eaeff1;
+  background-color: #78b9d3;
   font-family: Lora;
   font-size: large;
   }
@@ -49,7 +49,7 @@ h1 {
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  background-color:rgb(105, 138, 127);
+  background-color:78b9d3;
 }
 
 .navbar {
@@ -118,9 +118,9 @@ box-shadow: 1px 3px;
 }
 
 .whole-review {
-  border: #166045 solid;
+  border: #6b1d1d solid;
   background-image: img_url;
-  border-radius: 5px;
+  border-radius: 25%;
   background-image: url("https://www.boardcubator.com/wp-content/themes/wp/static/images/bg-cyan.svg");
 background-size: cover;
 background-repeat: no-repeat;
@@ -155,8 +155,14 @@ background-position: center;
   margin-top: 40px;
 }
 .comment {
-  display: flex;
-  margin-bottom: 28px;
+  background-color: #78b9d3;;
+	position: relative;
+	padding: 20px;
+  border:#6b1d1d solid;
+  margin-top:5px;
+  margin-bottom:5px;
+  border-radius: 5px;
+  color:black;
 }
 
 .comment-image-container {
@@ -165,6 +171,8 @@ background-position: center;
 
 .comment-image-container img {
   border-radius: 50px;
+  width: 30px;
+  height: 30px;
 }
 
 .comment-right-part {
@@ -189,7 +197,7 @@ background-position: center;
   padding: 8px 16px;
   background: rgb(59, 130, 246);
   border-radius: 8px;
-  color: white;
+  color: rgb(145, 202, 210);
 }
 
 .comment-form-button:hover:enabled {
@@ -220,4 +228,11 @@ width:20%;
   height: 100px;
   width: 100px;
   border-radius: 10px 10px 10px 10px 
+}
+
+
+.delete-button {
+  background-color:rgb(59, 130, 246);;
+  border-radius: 8px;
+  color: white;
 }

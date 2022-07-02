@@ -2,7 +2,7 @@ export default function SingleReviewView({title, designer, owner, review_body, r
     return (
         <>
         <div className="single-review-text" style={{background: review_img_url}}>
-             <p> <strong>Title- </strong>{title} </p>
+             <h2> {title} </h2>
              <p> <strong>Designer- </strong>{designer} </p>
              <p> <strong>Owner- </strong>{owner}</p>
              <p> <strong>Category- </strong>{category}</p>
