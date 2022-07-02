@@ -1,8 +1,10 @@
-export default function Header() {
+const Header = () => {
+
     return (
         <header id="Header">
-        <h1>Northcoders Board Game Reviews</h1>
-        <h2>For all your Board Gaming review needs! </h2>
+        <h1>Northcoders Board Game Reviews</h1>        
         </header>
     )
 }
+
+export default Header;

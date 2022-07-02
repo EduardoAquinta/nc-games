@@ -4,8 +4,9 @@ const gamesDB = axios.create({
     baseURL: 'https://edenv1.herokuapp.com/api'
 });
 
-export const fetchReviewList = (slug) => {
-    return gamesDB.get(`/reviews`, {params: {category: slug}})
+export const fetchReviewList = (slug, comment_count) => {
+    const params = {category:slug, sortby: comment_count}
+    return gamesDB.get(`/reviews`, {params})
     .then((response) => {
         return response.data
     });
@@ -14,7 +15,6 @@ export const fetchReviewList = (slug) => {
 export const fetchCategoryList = () => {
     return gamesDB.get(`/categories`)
     .then((response) => {
-        console.log(response, "<---postfetch")
         return response.data
     });
 };
@@ -40,26 +40,30 @@ export const fetchComments = (review_id) => {
     });
 };
 
-<<<<<<< HEAD
 export const postComment = ({username, body, review_id}) => {
-    console.log( body, username, review_id, "<--- prePost");
-    return gamesDB.post(`/reviews/${review_id}/comments`, { username, body})
+    console.log({username, body, review_id}, "<--- before api")
+    return gamesDB.post(`/reviews/${review_id}/comments`,  {username, body})
     .then((response) => {
-        console.log(response, "<--- postFetch")
+        console.log(response.data, "<--- afterApi")
         return response.data
     })
     .catch((error)=> {
         console.dir(error);
-    })
-} 
+    });
+} ;
 
+export const deleteCommentFromApi = (comment_id) => {
+    return gamesDB.delete(`/comments/${comment_id}`, { comment_id})
+    .then((empty) => {
+        return {empty};
+    });
+};
 
-=======
-export const postComment = ({review_id, author, body}) => {
-    return gamesDB.post(`/reviews/${review_id}`, {author, body})
+export const fetchUserList = () => {
+    return gamesDB.get(`/users`)
     .then((response) => {
-        console.log(response.data)
         return response.data
     });
 };
->>>>>>> main
+
+
