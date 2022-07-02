@@ -17,7 +17,6 @@ const CategoryList =() => {
     
 
     if( isLoading) return <p>Fetching categories now...please wait...</p>
-
     return(
         <> 
         <section >

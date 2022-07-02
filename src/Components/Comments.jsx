@@ -8,6 +8,7 @@ const Comments = ({review_id}) => {
 
     const [backendComments, setBackendComments] = useState([])
 
+
     const addComment = (body, username, review_id) => {
         postComment(body, username, review_id)
         .then(({comment}) => {

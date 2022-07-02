@@ -206,3 +206,18 @@ background-position: center;
   margin-left: 10px;
 }
 
+
+
+.user-list {
+flex:auto;
+flex-direction: row;
+flex-wrap: wrap;
+border:#6b1d1d solid;
+padding: 5px;
+width:20%;
+}
+.user-list img {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px 10px 10px 10px 
+}

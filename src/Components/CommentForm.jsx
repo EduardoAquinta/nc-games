@@ -4,8 +4,10 @@ const CommentForm = ({handleSubmit, submitLabel, review_id}) => {
     const[body, setBody] = useState("")
     const[username, setUsername] =useState("")
 
+let user = "jessjelly"
+
     const addComment={
-        username:username,
+        username:user,
         body:body,
         review_id:review_id
     }

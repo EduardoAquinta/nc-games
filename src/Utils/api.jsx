@@ -8,7 +8,6 @@ export const fetchReviewList = (slug, comment_count) => {
     const params = {category:slug, sortby: comment_count}
     return gamesDB.get(`/reviews`, {params})
     .then((response) => {
-        console.log(response);
         return response.data
     });
 };
@@ -42,9 +41,10 @@ export const fetchComments = (review_id) => {
 };
 
 export const postComment = ({username, body, review_id}) => {
-    return gamesDB.post(`/reviews/${review_id}/comments`, { username, body})
+    console.log({username, body, review_id}, "<--- before api")
+    return gamesDB.post(`/reviews/${review_id}/comments`,  {username, body})
     .then((response) => {
-        console.log(response.data)
+        console.log(response.data, "<--- afterApi")
         return response.data
     })
     .catch((error)=> {
