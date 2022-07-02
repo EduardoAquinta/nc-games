@@ -2,15 +2,11 @@ import { useState } from "react";
 import { deleteCommentFromApi } from "../Utils/api";
 
 const DeleteComment = ({comment_id}) => {
-    const [deleteComment, setDeleteComment] = useState({});
     const [isDeleting, setIsDeleting] = useState(false);
-
 
     const handleClick = () => {
         deleteCommentFromApi(comment_id)
-        .then((commentDeleted) => {
-            console.log(commentDeleted)
-            setDeleteComment(commentDeleted);
+        .then(() => {
             setIsDeleting(true);
         })
     };

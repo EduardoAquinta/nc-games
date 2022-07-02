@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const CommentForm = ({handleSubmit, submitLabel, review_id}) => {
     const[body, setBody] = useState("")
-    const[username, setUsername] =useState("")
 
 let user = "jessjelly"
 
