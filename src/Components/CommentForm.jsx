@@ -21,7 +21,7 @@ let user = "jessjelly"
     }
 
     return (
-        <form onSubmit={onSubmit}>
+        <form className="comment-form-textarea" onSubmit={onSubmit}>
                 <textarea 
                 className="comment-form-textarea"
                 rows="4"
