@@ -5,6 +5,15 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
 }
+@media screen and (min-width:800px) {
+  .App {
+    display:flex;
+    flex-direction: column;
+    width:25% 25%;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .App {
   text-align: center;
@@ -20,13 +29,14 @@ body {
 }
 
 #Header {
-color:#394fc9;
+color:#6b1d1d;
 text-shadow: black 10px;
 background-image: url("https://images.pexels.com/photos/1314435/pexels-photo-1314435.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 font-size: 50px;
+font:Lora;
 }
 
 h1 {
